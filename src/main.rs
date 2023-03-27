@@ -12,8 +12,7 @@ fn main() -> std::io::Result<()> {
         
         while tcp_stream.read(&mut buf).unwrap() != 0 {
             // println!("{:?}", buf);
-            let s = (buf[0] as i8, buf[1] as i8, buf[2]);
-            println!("{:?}", s);
+            println!("{:?}", buf);
         }
 
     }
